@@ -53,7 +53,7 @@ function Row(row) {
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    {row.products?.map((pdRow) => (
+                                    {row.products.map((pdRow) => (
                                         <TableRow key={pdRow.id}>
                                             <TableCell component="th" scope="row">
                                                 {pdRow.quantity}
