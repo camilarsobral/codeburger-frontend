@@ -14,6 +14,7 @@ import PropTypes from 'prop-types'
 import { ProductImg } from './styles'
 
 function Row(row) {
+    // console.log('row', row)
     const [open, setOpen] = React.useState(false)
 
     return (
@@ -54,16 +55,19 @@ function Row(row) {
                                 </TableHead>
                                 <TableBody>
                                     {row.products.map((pdRow) => (
-                                        <TableRow key={pdRow.id}>
-                                            <TableCell component="th" scope="row">
-                                                {pdRow.quantity}
-                                            </TableCell>
-                                            <TableCell>{pdRow.name}</TableCell>
-                                            <TableCell>{pdRow.category}</TableCell>
-                                            <TableCell>
-                                                <ProductImg src={pdRow.url} alt='imagem-do-produto' />
-                                            </TableCell>
-                                        </TableRow>
+                                        <>
+                                            {console.log('pdRow', pdRow)}
+                                            <TableRow key={pdRow.id}>
+                                                <TableCell component="th" scope="row">
+                                                    {pdRow.quantity}
+                                                </TableCell>
+                                                <TableCell>{pdRow.name}</TableCell>
+                                                <TableCell>{pdRow.category}</TableCell>
+                                                <TableCell>
+                                                    <ProductImg src={pdRow.url} alt='imagem-do-produto' />
+                                                </TableCell>
+                                            </TableRow>
+                                        </>
                                     ))}
                                 </TableBody>
                             </Table>

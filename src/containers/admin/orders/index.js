@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
@@ -15,9 +15,15 @@ function Orders() {
 
     const [orders, setOrders] = useState([])
     const [rows, setRows] = useState([])
+    const firstRenderRef = useRef(true)
 
 
     useEffect(() => {
+
+        if (firstRenderRef.current) {
+            firstRenderRef.current = false
+            return
+        }
 
         async function loadOrders() {
             const { data } = await api.get('orders')
@@ -44,7 +50,7 @@ function Orders() {
     }, [orders])
 
 
-    console.log(rows)
+    console.log('1row', rows)
 
 
     return (
