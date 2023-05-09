@@ -1,7 +1,7 @@
 const paths = {
     order: '/pedidos',
     products: '/listar-produtos',
-    editProducts: '/editar-produto',
+    editProduct: '/editar-produto',
     newProduct: '/novo-produto'
 }
 

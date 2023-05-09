@@ -6,11 +6,11 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import api from '../../services/api'
 
-import { Button } from '../../components'
+import { Button, ErrorMessage } from '../../components'
 import RegisterImg from '../../assets/register-img.svg'
 import Logo from '../../assets/logo.svg'
 
-import { Container, RegisterImage, ContainerItems, Label, Input, ErrorMessage, SignInLink } from './styles'
+import { Container, RegisterImage, ContainerItems, Label, Input, SignInLink } from './styles'
 
 export function Register() {
 

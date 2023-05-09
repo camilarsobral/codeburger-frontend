@@ -16,7 +16,7 @@ import api from '../../../services/api'
 import status from './order-status'
 
 function Row({ row, setOrders, orders }) {
-    // console.log('row', row)
+
     const [open, setOpen] = React.useState(false)
     const [isLoading, setIsLoading] = React.useState(false)
 
@@ -86,7 +86,6 @@ function Row({ row, setOrders, orders }) {
                                 <TableBody>
                                     {row.products.map((pdRow) => (
                                         <>
-                                            {console.log('pdRow', pdRow)}
                                             <TableRow key={pdRow.id}>
                                                 <TableCell component="th" scope="row">
                                                     {pdRow.quantity}

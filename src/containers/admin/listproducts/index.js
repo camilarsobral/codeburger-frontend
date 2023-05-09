@@ -10,13 +10,15 @@ import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import CheckBoxIcon from '@mui/icons-material/CheckBox'
 import CancelIcon from '@mui/icons-material/Cancel'
-
+import { useHistory } from 'react-router-dom'
 import formatCurrency from '../../../utils/formatCurrency'
+import paths from '../../../constants/paths'
 
 
 function ListProducts() {
 
     const [products, setProducts] = useState()
+    const { push } = useHistory()
 
     useEffect(() => {
 
@@ -33,6 +35,10 @@ function ListProducts() {
             return <CheckBoxIcon style={{ color: '#228b22' }} />
         }
         return <CancelIcon style={{ color: '#cc1717' }} />
+    }
+
+    function editProduct(product) {
+        push(paths.editProduct, { product })
     }
 
     return (
@@ -60,7 +66,7 @@ function ListProducts() {
                                 <TableCell>{formatCurrency(product.price)}</TableCell>
                                 <TableCell align='center'>{isOffer(product.offer)}</TableCell>
                                 <TableCell align='center'><Img src={product.url} alt='imagem-produto' /></TableCell>
-                                <TableCell align='center'><EditIconStyle /></TableCell>
+                                <TableCell align='center'><EditIconStyle onClick={() => editProduct(product)} /></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

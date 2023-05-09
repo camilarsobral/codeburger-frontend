@@ -8,6 +8,9 @@ export const Container = styled.div`
 
 export const ProductImg = styled.img`
     width: 60px;
+    height: 60px;
+    object-fit: cover;
+    object-position: 50% 90%;
     border-radius: 5px;
 `
 

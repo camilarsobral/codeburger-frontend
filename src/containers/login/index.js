@@ -9,11 +9,11 @@ import { useUser } from '../../hooks/UserContext'
 
 import api from '../../services/api'
 
-import { Button } from '../../components'
+import { Button, ErrorMessage } from '../../components'
 import LoginImg from '../../assets/login-img.svg'
 import Logo from '../../assets/logo.svg'
 
-import { Container, LoginImage, ContainerItems, Label, Input, ErrorMessage, SignInLink } from './styles'
+import { Container, LoginImage, ContainerItems, Label, Input, SignInLink } from './styles'
 
 export function Login() {
 

@@ -39,6 +39,10 @@ export const ContainerItems = styled.div`
         text-align: center;
         margin-top: 50px;
     }
+
+    .sc-hhGHuG.gQwNUx {
+        padding-left: 55px;
+    }
 `
 
 export const Label = styled.p`
@@ -63,15 +67,6 @@ export const Input = styled.input`
     display: flex;
     align-self: center;
 `
-export const ErrorMessage = styled.p`
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #CC1717;
-    margin-top: 5px;
-    padding-left: 55px;
-`
-
 export const SignInLink = styled.p`
     font-style: normal;
     font-weight: 400;
