@@ -23,8 +23,8 @@ function NewProduct() {
         category: Yup.object().required('Escolha uma categoria'),
         file: Yup.mixed().test('required', 'Carregue um arquivo', value => {
             return value && value.length > 0
-        }).test('fileSize', 'Carregue arquivos até 2MB', value => {
-            return value && value.size <= 2000000
+        }).test('fileSize', 'Carregue arquivos até 5MB', value => {
+            return value && value.size <= 5000000
         })
 
     })
