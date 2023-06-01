@@ -22,7 +22,7 @@ export const Header = styled.div`
 `
 export const Body = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 160px);
     padding: 10px;
     width: max-content;
     grid-gap: 10px 15px;
